@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVVM_JAVA</string>
+    <string name="heading">MVVM Architecture with JAVA</string>
+    <string name="email_hint">Mail ID</string>
+    <string name="password_hint">Password</string>
+    <string name="button_text">Login</string>
+</resources>
