@@ -1,4 +1,4 @@
-package com.example.mvvm_jetpack.ui.components
+package com.example.mvvm_jetpack.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -11,13 +11,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
 import com.example.mvvm_jetpack.domain.model.Recipe
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import com.example.mvvm_jetpack.R
 import com.example.mvvm_jetpack.util.DEFAULT_RECIPE_IMAGE
 import com.example.mvvm_jetpack.util.loadPicture
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
 @Composable
@@ -39,14 +37,14 @@ fun RecipeCard(
 
         Column() {
             recipe.featuredImage?.let { url ->
-                val image =loadPicture(url = url, defaultImage = DEFAULT_RECIPE_IMAGE).value
+                val image = loadPicture(url = url, defaultImage = DEFAULT_RECIPE_IMAGE).value
                 image?.let { img ->
                     Image(
-                        bitmap = img.asImageBitmap(),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .preferredHeight(225.dp),
-                        contentScale = ContentScale.Crop,
+                            bitmap = img.asImageBitmap(),
+                            modifier = Modifier
+                                    .fillMaxWidth()
+                                    .preferredHeight(225.dp),
+                            contentScale = ContentScale.Crop,
                     )
                 }
             }

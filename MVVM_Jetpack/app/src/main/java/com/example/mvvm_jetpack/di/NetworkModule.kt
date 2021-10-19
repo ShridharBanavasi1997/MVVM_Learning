@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
+
     @Singleton
     @Provides
     fun provideRecipeMapper(): RecipeDtoMapper {
@@ -31,10 +32,15 @@ object NetworkModule {
             .create(RecipeService::class.java)
     }
 
+    /**
+     * I might include proper authentication later on food2fork.ca
+     * For now just hard code a token.
+     */
     @Singleton
     @Provides
     @Named("auth_token")
     fun provideAuthToken(): String{
         return "Token 9c8b06d329136da358c2d00e76946b0111ce2c48"
     }
+
 }

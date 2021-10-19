@@ -1,4 +1,4 @@
-package com.example.mvvm_jetpack.ui.recipe
+package com.example.mvvm_jetpack.presentation.ui.recipe
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,3 +35,12 @@ class RecipeFragment: Fragment() {
         }
     }
 }
+
+
+
+
+
+
+
+
+
