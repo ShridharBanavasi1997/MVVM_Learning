@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/contactListFragment">
+
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.example.mvvm_jetpack_database.ui.contact_list.ContactListFragment"
+        android:label="ContactListFragment" >
+        <action
+            android:id="@+id/addFragment"
+            app:destination="@id/contactAddFragment" />
+        <action
+            android:id="@+id/detailsFragment"
+            app:destination="@id/contactDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactAddFragment"
+        android:name="com.example.mvvm_jetpack_database.ui.contact_add.ContactAddFragment"
+        android:label="ContactAddFragment" />
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="com.example.mvvm_jetpack_database.ui.contact_details.ContactDetailsFragment"
+        android:label="ContactDetailsFragment" />
+</navigation>
